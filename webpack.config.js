@@ -6,7 +6,7 @@ module.exports = {
 
     devtool: "inline-source-map",
 
-    entry: path.join(root, 'src', 'index.js'),
+    entry: path.join(root, 'src', 'scripts', 'index.js'),
 
     output: {
         filename: 'bundle.js',
@@ -19,7 +19,10 @@ module.exports = {
     module: {
         rules: [
             { test: /\.tsx?$/, loader: "ts-loader" },
-            { test: /\.jsx?$/, loader: "babel-loader" }
+            { test: /\.jsx?$/, loader: "babel-loader" },
+            { test: /\.html$/, loader: "file-loader",
+                options: { name: '[name].[ext]' }
+            },
         ]
     }
 };

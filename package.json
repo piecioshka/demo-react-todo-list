@@ -2,8 +2,12 @@
     "name": "test-react-todo-list",
     "version": "1.0.0",
     "scripts": {
+        "clear": "rm -rf dist/",
+        "dev": "webpack-dev-server",
         "build": "webpack",
         "watch": "webpack -w",
+        "predeploy": "npm run clear",
+        "deploy": "NODE_DEBUG=gh-pages gh-pages -d dist/",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
@@ -15,9 +19,12 @@
         "@babel/preset-env": "^7.8.4",
         "@babel/preset-react": "^7.8.3",
         "babel-loader": "^8.0.6",
+        "file-loader": "^5.0.2",
+        "gh-pages": "^2.2.0",
         "ts-loader": "^6.2.1",
         "typescript": "^3.7.5",
         "webpack": "^4.41.5",
-        "webpack-cli": "^3.3.10"
+        "webpack-cli": "^3.3.10",
+        "webpack-dev-server": "^3.10.2"
     }
 }
