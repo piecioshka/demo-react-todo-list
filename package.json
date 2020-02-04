@@ -4,9 +4,9 @@
     "scripts": {
         "clear": "rm -rf dist/",
         "dev": "webpack-dev-server",
-        "build": "webpack",
+        "build": "webpack -p",
         "watch": "webpack -w",
-        "predeploy": "npm run clear",
+        "predeploy": "npm run clear && npm run build",
         "deploy": "NODE_DEBUG=gh-pages gh-pages -d dist/",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
