@@ -1,16 +1,18 @@
-import React from 'react';
-import { Task } from './task';
+import React, { useState, useCallback } from 'react';
+import { TaskList } from './task-list';
+import { AddTask } from './add-task';
 
 export const TodoList = () => {
-    const tasks = [1, 2, 3, 4];
+    const [list, setList] = useState([]);
+
+    const onAdd = (task) => {
+        setList([...list, task]);
+    };
+
     return (
-        <div>
-            <h1>Lista zadań</h1>
-            <div id="todo-list">
-                {tasks.map((task, index) => {
-                    return <Task key={index} />
-                })}
-            </div>
-        </div>
+        <>
+            <AddTask onAdd={onAdd} />
+            <TaskList tasks={list} />
+        </>
     );
-};
+}

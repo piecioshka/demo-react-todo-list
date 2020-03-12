@@ -1,11 +1,9 @@
 import React from 'react';
 
-export const Task = () => {
-    throw 'ble';
-
+export const Task = ({ name }) => {
     return (
         <div>
-            <small>Task</small>
+            <small>{name}</small>
         </div>
     );
 };
