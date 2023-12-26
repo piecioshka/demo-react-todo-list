@@ -1,9 +1,12 @@
 import React from 'react';
 
-export const Task = ({ name }) => {
+export const Task = ({ task, onRemove }) => {
     return (
         <li>
-            <small>{name}</small>
+            <button
+              className="remove-button"
+              onClick={() => onRemove(task)}
+            >x</button>{task}
         </li>
     );
 };

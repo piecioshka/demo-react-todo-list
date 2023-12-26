@@ -8,11 +8,16 @@ export const TodoList = ({ label }) => {
     const onAdd = (task) => {
         setList([...list, task]);
     };
+    const onRemove = (task) => {
+      console.log('onRemoveTask', task);
+      const newList = list.filter(t => t !== task);
+      setList(newList);
+    };
 
     return (
-        <div className='todo-list'>
+        <div className="todo-list">
             <AddTask onAdd={onAdd} label={label} />
-            <TaskList tasks={list} />
+            <TaskList tasks={list} onRemove={onRemove} />
         </div>
     );
 }
