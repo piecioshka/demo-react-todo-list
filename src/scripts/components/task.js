@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Task = ({ name }) => {
     return (
-        <div>
+        <li>
             <small>{name}</small>
-        </div>
+        </li>
     );
 };

@@ -1,8 +1,7 @@
 import React from 'react';
 
-const ENTER_KEY_CODE = 13;
-
 export const AddTask = ({
+    label,
     onAdd
 }) => {
     const $form = React.createRef();
@@ -17,7 +16,10 @@ export const AddTask = ({
 
     return (
         <form ref={$form} onSubmit={onSubmit} >
-            <input ref={$input} placeholder="Name task..." required />
+            <label>
+                {label}{" "}
+                <input ref={$input} type="text" placeholder="Enter task..." required />
+            </label>
         </form>
     );
 };

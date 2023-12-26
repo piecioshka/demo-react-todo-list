@@ -3,10 +3,10 @@ import { Task } from './task';
 
 export const TaskList = ({ tasks }) => {
     return (
-        <div>
+        <ul>
             {tasks.map((task, index) => {
                 return <Task key={index} name={task}/>
             })}
-        </div>
+        </ul>
     );
 };

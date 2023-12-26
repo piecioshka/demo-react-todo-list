@@ -4,11 +4,10 @@ import { TodoList } from './todo-list';
 
 export const App = () => {
     return (
-        <div>
-            <h1>Lista zadań</h1>
-            <ErrorBoundary>
-                <TodoList/>
-            </ErrorBoundary>
-        </div>
+        <ErrorBoundary>
+            <TodoList label="List no. 1" />
+            <TodoList label="List no. 2" />
+            <TodoList label="List no. 3" />
+        </ErrorBoundary>
     );
 };
