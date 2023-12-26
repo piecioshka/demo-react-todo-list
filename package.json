@@ -5,8 +5,8 @@
     "scripts": {
         "clear": "rm -rf dist/",
         "dev": "webpack-dev-server",
-        "build": "webpack -p",
-        "watch": "webpack -w",
+        "build": "webpack",
+        "start": "http-server -c-1 dist/",
         "predeploy": "npm run clear && npm run build",
         "deploy": "NODE_DEBUG=gh-pages gh-pages -d dist/",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,6 +23,7 @@
         "css-loader": "^6.8.1",
         "file-loader": "^6.2.0",
         "gh-pages": "^6.1.1",
+        "http-server": "^14.1.1",
         "style-loader": "^3.3.3",
         "ts-loader": "^9.5.1",
         "typescript": "^5.3.3",
