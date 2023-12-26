@@ -8,8 +8,8 @@ export const TodoList = ({ label }) => {
     const onAdd = (task) => {
         setList([...list, task]);
     };
+
     const onRemove = (task) => {
-      console.log('onRemoveTask', task);
       const newList = list.filter(t => t !== task);
       setList(newList);
     };
