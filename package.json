@@ -1,5 +1,6 @@
 {
-    "name": "test-react-todo-list",
+    "private": true,
+    "name": "demo-react-todo-list",
     "version": "1.0.0",
     "scripts": {
         "clear": "rm -rf dist/",
