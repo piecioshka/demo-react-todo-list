@@ -1,10 +1,19 @@
 # demo-react-todo-list
 
-🚁 Demo project in React • Todo List
+🚁 Demo project with "todo list" in React
+
+![](./demo.gif)
 
 ## Preview 🎉
 
 <https://piecioshka.github.io/demo-react-todo-list/>
+
+## Getting started
+
+```bash
+npm install
+npm run dev
+```
 
 ## License
 
