@@ -19,7 +19,7 @@ em {
     font-style: normal;
 }
 
-.app {
+#app {
     display: flex;
     justify-content: space-between;
 }
