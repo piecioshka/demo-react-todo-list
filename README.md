@@ -2,8 +2,6 @@
 
 🚁 Demo project with "todo list" in React
 
-![](./demo.gif)
-
 ## Preview 🎉
 
 <https://piecioshka.github.io/demo-react-todo-list/>
