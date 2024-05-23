@@ -3,12 +3,10 @@ import "../styles/main.css";
 
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { TodoList } from "./components/todo-list";
+import { App } from "./components/App";
 
 createRoot(document.querySelector("#app")).render(
   <React.StrictMode>
-    <TodoList label="List no. 1" />
-    <TodoList label="List no. 2" />
-    <TodoList label="List no. 3" />
+    <App />
   </React.StrictMode>
 );

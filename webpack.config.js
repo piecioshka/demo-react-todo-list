@@ -6,7 +6,7 @@ module.exports = {
 
     devtool: "inline-source-map",
 
-    entry: path.join(root, 'src', 'scripts', 'app.jsx'),
+    entry: path.join(root, 'src', 'scripts', 'main.jsx'),
 
     output: {
         filename: 'bundle.js',
