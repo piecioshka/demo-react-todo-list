@@ -8,7 +8,7 @@ export const AddTask = ({ label, onAdd }) => {
     evt.preventDefault();
     onAdd({
       id: Date.now(),
-      value: inputRef.current.value,
+      value: inputRef.current.value.trim(),
       done: false,
     });
     formRef.current.reset();
