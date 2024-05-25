@@ -1,9 +1,12 @@
 import React from "react";
 
-export const Checkbox = ({ checked, onChange }) => {
+export const Checkbox = ({ checked, onClick }) => {
   return (
-    <i className="checkbox" onClick={onChange}>
-      {checked ? "√" : ""}
+    <i
+      className={["checkbox", checked && "checked"].join(" ")}
+      onClick={onClick}
+    >
+      {checked ? "✓" : ""}
     </i>
   );
 };

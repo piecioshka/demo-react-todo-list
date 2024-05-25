@@ -6,26 +6,23 @@ export const AddTask = ({ label, onAdd }) => {
 
   const onSubmit = (evt) => {
     evt.preventDefault();
-    const value = inputRef.current.value;
-    formRef.current.reset();
     onAdd({
       id: Date.now(),
-      value,
+      value: inputRef.current.value,
       done: false,
     });
+    formRef.current.reset();
   };
 
   return (
-    <form ref={formRef} onSubmit={onSubmit}>
-      <label>
-        {label}{" "}
-        <input
-          ref={inputRef}
-          type="text"
-          placeholder="Enter the task..."
-          required
-        />
-      </label>
+    <form ref={formRef} onSubmit={onSubmit} className="add-task-form">
+      <input
+        className="add-task-input"
+        ref={inputRef}
+        type="text"
+        placeholder={`(${label}) What needs to be done?`}
+        required
+      />
     </form>
   );
 };
