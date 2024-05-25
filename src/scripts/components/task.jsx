@@ -4,7 +4,7 @@ import { CloseButton } from "./CloseButton";
 
 export const Task = ({ task, onRemove, onResolve }) => {
   return (
-    <li className={["task", task.done && "done"].join(" ")}>
+    <li className={["task", task.done ? "done" : ""].join(" ").trim()}>
       <Checkbox checked={task.done} onClick={() => onResolve(task)} />
       <label>{task.value}</label>
       <CloseButton onClick={() => onRemove(task)} />

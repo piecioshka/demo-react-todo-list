@@ -7,7 +7,9 @@ export const Footer = ({ activeTasks, mode, setMode, clearCompleted }) => {
       <ul>
         <li>
           <button
-            className={["button", mode === "all" && "active"].join(" ")}
+            className={["button", mode === "all" ? "active" : ""]
+              .join(" ")
+              .trim()}
             onClick={() => setMode("all")}
           >
             All
@@ -15,7 +17,9 @@ export const Footer = ({ activeTasks, mode, setMode, clearCompleted }) => {
         </li>
         <li>
           <button
-            className={["button", mode === "active" && "active"].join(" ")}
+            className={["button", mode === "active" ? "active" : ""]
+              .join(" ")
+              .trim()}
             onClick={() => setMode("active")}
           >
             Active
@@ -23,7 +27,9 @@ export const Footer = ({ activeTasks, mode, setMode, clearCompleted }) => {
         </li>
         <li>
           <button
-            className={["button", mode === "completed" && "active"].join(" ")}
+            className={["button", mode === "completed" ? "active" : ""]
+              .join(" ")
+              .trim()}
             onClick={() => setMode("completed")}
           >
             Completed
